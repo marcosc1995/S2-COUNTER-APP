@@ -1,0 +1,24 @@
+{
+  "name": "s2-counter-app",
+  "version": "1.0.0",
+  "description": "Starcraft 2 counter guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosc1995/S2-COUNTER-APP.git"
+  },
+  "keywords": [
+    "starcraft",
+    "game",
+    "app"
+  ],
+  "author": "Marcos Caitano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcosc1995/S2-COUNTER-APP/issues"
+  },
+  "homepage": "https://github.com/marcosc1995/S2-COUNTER-APP#readme"
+}
