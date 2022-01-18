@@ -1,9 +1,8 @@
 // cuando el usuario hace click en la raza
 // se debe desplegar todas las unidades de la misma
 
-document.getElementById("terran").addEventListener("click", showUnits);
+document.querySelector("#terran").addEventListener("click", showUnits);
 
-// const terrans = ["marine", "marauder", "tank", "widowmine"];
 const terrans = [
   {
     name: "Marine",
@@ -105,14 +104,19 @@ const terrans = [
   {
     name: "Hellbat",
     countersTerran: ["Marine", "Marauder(soft)", "Hellbats"],
-    countersZerg: ["Zergling","Roach(soft)","Hydralisk(Small numbers)","Baneling(cost efficiency)"],
+    countersZerg: [
+      "Zergling",
+      "Roach(soft)",
+      "Hydralisk(Small numbers)",
+      "Baneling(cost efficiency)",
+    ],
     countersProtoss: ["Zealot", "Sentry", "Stalker(soft)", "Immortal(soft)"],
   },
 
   {
     name: "Widow Mine",
     countersTerran: ["Medivac", "Banshee"],
-    countersZerg: ["Baneling","Mutalisk"],
+    countersZerg: ["Baneling", "Mutalisk"],
     countersProtoss: ["Oracle", "Stalker*", "Immortal*"],
   },
 ];
@@ -133,7 +137,24 @@ let unitsList = "";
 
 function showUnits() {
   for (let i = 0; i < terrans.length; i++) {
-    unitsList += "<div>" + terrans[i].name + "</div>";
+    unitsList += "<div class='unit'>" + terrans[i].name + "</div>";
   }
   document.getElementById("units").innerHTML = unitsList;
+  
+  let counterList = "";
+
+  for (let i = 0; i < terrans.length; i++) {
+
+    
+    counterList += "<div>"+ terrans[i].countersZerg +"</div>";      
+  }
+
+  document.querySelector(".unit").addEventListener("click", showCounters);
+
+
+  function showCounters() {
+    document.querySelector(".counters").innerHTML= counterList;
+  }
+
 }
+

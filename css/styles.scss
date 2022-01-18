@@ -2,6 +2,12 @@ h2 {
   text-align: center;
 }
 
+.test {
+  width: 200px;
+  height: 200px;
+  background-color: blanchedalmond;
+}
+
 .species {
   display: flex;
   justify-content: center;
@@ -14,27 +20,16 @@ h2 {
 }
 
 .units {
-//   background-color: tomato;
+  //   background-color: tomato;
   border: 1px solid black;
   height: 400px;
   width: 350px;
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
-  div{
-      margin: 5px;
+  div {
+    margin: 5px;
   }
-  &__unit{
-      background-color: red;
-      width: 100px;
-      height: 150px;
-      &__info{
-          width: 100%;
-          background-color: green;
-          height: 30%;
-      }
-  }
-
 }
 
 .counters {
@@ -42,4 +37,6 @@ h2 {
   height: 400px;
   width: 350px;
   margin: 50px auto;
+  display: flex;
+  flex-direction: column;
 }
