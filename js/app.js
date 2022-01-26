@@ -220,6 +220,25 @@ for (let i = 0; i < terranUnits.length; i++) {
   });
 }
 
+//-------------------------------------------------------------------------------------------------
+
+// FALTA CONSEGUIR QUE ME IMPRIMA LOS COUNTERS SOLO DE LA UNIDAD SELECCIONADA
+// LO SIGUIENTE ES HACER UNA FUNCION QUE PERMITA ESCUCHAR CADA UNO DE LOS DIV DE UNIDADES
+// Y CREE UN ARRAY CON LOS RESPECTIVOS COUNTERS DE LAS 3 RAZAS 
+
+//--------------------------------------------------------------------------------------------------
+
+// POSIBLES SOLUCIONES 
+// guardar en una variable la seleccion hecha por el click
+// crear un array vacio y llenarlo con un ciclo for que 
+// recorra los tres array de counters deferentes  
+// puedo usar botones para que de esta manera cuando le doy al boton terran solo 
+// se muestren los counters de esa raza 
+
+
+
+
+
 // document.querySelector("#units").addEventListener("click", function (e) {
 //   if (e.target && e.target.matches("div#marine")) {
 //     console.log("prueba exitosa");
