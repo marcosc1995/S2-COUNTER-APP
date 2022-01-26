@@ -1,7 +1,7 @@
-// cuando el usuario hace click en la raza
-// se debe desplegar todas las unidades de la misma
-
-document.querySelector("#terran").addEventListener("click", showUnits);
+/*
+Cuando el usuario hace click en el cuadro de la raza se debe desplegar 
+la lista de unidades de la misma 
+*/
 
 const terrans = [
   {
@@ -39,7 +39,7 @@ const terrans = [
     countersProtoss: ["Zealot", "Sentry"],
   },
   {
-    name: "Siege Tank",
+    name: "SiegeTank",
     countersTerran: ["Marine", "Hellion", "Thor"],
     countersZerg: ["Hydralisk", "Roach", "Baneling"],
     countersProtoss: ["Stalker", "Sentry", "Colossus"],
@@ -121,40 +121,116 @@ const terrans = [
   },
 ];
 
-const zergs = [
-  {
-    name: "Zergling",
-    counters: ["Hellion", "Hellbat", "Planetary Fortress"],
-  },
-  {
-    name: "Roach",
-    counters: ["Seige Tank", "Marauder", "Thor(with +3 weapons)"],
-  },
-];
-// funcion para mostrar todas las unidades
+const counterTerran = {
+  Marine: ["Thor", "Viking", "Banshee"],
+  Marauder: ["Hellion", "Reaper"],
+};
 
-let unitsList = "";
+const counterZerg = {
+  Marine: ["Mutalisk", "Corruptor", "Zergling"],
+  Marauder: ["Roach", "Ultralisk (soft)"],
+};
 
-function showUnits() {
-  for (let i = 0; i < terrans.length; i++) {
-    unitsList += "<div class='unit'>" + terrans[i].name + "</div>";
-  }
-  document.getElementById("units").innerHTML = unitsList;
-  
-  let counterList = "";
+const counterProtoss = {
+  Marine: ["Void Ray Immortal"],
+  Marauder: ["Stalker"],
+};
 
-  for (let i = 0; i < terrans.length; i++) {
+// SELECCIONA EL ELEMMENTO CON LA ID terran
+// AGREGA UNA FUNCION DE ESCUCHA PARA EL CLICK
+// EJECUTA LA FUNCION showUnits
+// FUNCION showRaceUnits  DEBE IMPRIMIR EN
+// PANTALLA LAS UNIDADES DE LA RAZA ELEGIDA
 
-    
-    counterList += "<div>"+ terrans[i].countersZerg +"</div>";      
-  }
+document.querySelector("#terran").addEventListener("click", showRaceUnits);
 
-  document.querySelector(".unit").addEventListener("click", showCounters);
+const terranUnits = [];
 
-
-  function showCounters() {
-    document.querySelector(".counters").innerHTML= counterList;
-  }
-
+for (let i = 0; i < 10; i++) {
+  terranUnits.push(terrans[i].name);
 }
 
+function showRaceUnits() {
+  for (let i = 0; i < terranUnits.length; i++) {
+    const units = document.createElement("div");
+    units.classList = "unit";
+    units.id = terranUnits[i].toLowerCase();
+    units.textContent = terranUnits[i];
+
+    document.querySelector("#units").appendChild(units);
+  }
+}
+
+// AGREGAR UNA FUNCION DE ESCUCHA PARA CADA UNIDAD MOSTRADA
+// MOSTRAR LOS COUNTERS DE LA UNIDAD SELECCIONADA
+
+const countersMarine = [];
+const countersMarauder = [];
+
+for (let i = 0; i < 3; i++) {
+  countersMarine.push(counterTerran.Marine[i]);
+  countersMarine.push(counterZerg.Marine[i]);
+  countersMarine.push(counterProtoss.Marine[i]);
+}
+for (let i = 0; i < 3; i++) {
+  countersMarauder.push(counterTerran.Marauder[i]);
+  countersMarauder.push(counterZerg.Marauder[i]);
+  countersMarauder.push(counterProtoss.Marauder[i]);
+}
+
+// for (let i = 0; i < 5; i++) {
+//   document.querySelector("#units").addEventListener('click',function (e) {
+//     if (e.target && e.target.matches()) {
+
+//     }
+
+//   })
+
+// }
+
+const marineTest = terranUnits[0];
+// var element = document.getElementsByTagName("p")[0];
+// var id = element.id;
+
+for (let i = 0; i < terranUnits.length; i++) {
+  document.querySelector("#units").addEventListener("click", function (e) {
+    if (e.target && e.target.matches("div#" + terranUnits[i].toLowerCase())) {
+      console.log("otra prueba exitosa");
+      for (let i = 0; i < 10; i++) {
+        document.querySelector("#" + terranUnits[i].toLowerCase()),
+          addEventListener("click", function (e) {
+            if (e.target && e.target.matches("div#"+ terranUnits[i].toLowerCase())) {
+              console.log("prueba exitosa en el segundo nivel")
+              for (let i = 0; i < 5 ; i++) {
+                const counterList = [];
+                counterList.push(terrans[i].countersZerg)
+                counterList.push(terrans[i].countersTerran)
+                const counter = document.createElement('div')
+                counter.textContent = counterList
+
+                document.querySelector('#counters').appendChild(counter)
+                
+                
+              }
+              
+            }
+          });
+      }
+    }
+  });
+}
+
+// document.querySelector("#units").addEventListener("click", function (e) {
+//   if (e.target && e.target.matches("div#marine")) {
+//     console.log("prueba exitosa");
+//     for (let i = 0; i < countersMarine.length; i++) {
+//       const counters = document.createElement("div");
+//       counters.textContent = countersMarine[i];
+//       counters.id = countersMarine[i];
+
+//       // Esto lo agrega al documento
+
+//       document.querySelector("#counters").appendChild(counters);
+//     }
+//   }
+// });

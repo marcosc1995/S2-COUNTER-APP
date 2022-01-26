@@ -32,6 +32,12 @@ h2 {
   }
 }
 
+.unit {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
 .counters {
   background-color: gray;
   height: 400px;
@@ -39,4 +45,9 @@ h2 {
   margin: 50px auto;
   display: flex;
   flex-direction: column;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
 }

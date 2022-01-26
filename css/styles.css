@@ -40,6 +40,12 @@ h2 {
   margin: 5px;
 }
 
+.unit {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
 .counters {
   background-color: gray;
   height: 400px;
@@ -52,5 +58,14 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=styles.css.map */
