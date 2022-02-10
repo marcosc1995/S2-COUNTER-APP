@@ -1,34 +1,16 @@
-h2 {
-  text-align: center;
-}
-
-.test {
-  width: 200px;
-  height: 200px;
-  background-color: blanchedalmond;
-}
-
-.species {
+.selector {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.species__selector {
+.raza {
   width: 100px;
   height: 100px;
-  background-color: tomato;
-  margin: 10px;
+  background-color: blue;
 }
 
-.units {
-  border: 1px solid black;
-  height: 400px;
-  width: 350px;
-  margin: 50px auto;
+.unidades {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,36 +18,23 @@ h2 {
       flex-wrap: wrap;
 }
 
-.units div {
-  margin: 5px;
-}
-
-.unit {
-  height: 50px;
-  width: 50px;
+.unidad {
+  width: 100px;
+  height: 100px;
   background-color: red;
 }
 
 .counters {
-  background-color: gray;
-  height: 400px;
-  width: 350px;
-  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.counter {
+  width: 100px;
+  height: 100px;
+  background-color: green;
 }
 /*# sourceMappingURL=styles.css.map */
