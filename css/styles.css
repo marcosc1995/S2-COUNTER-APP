@@ -1,13 +1,28 @@
+body {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
 .selector {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 .raza {
   width: 100px;
   height: 100px;
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.384);
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
 }
 
 .unidades {
@@ -16,12 +31,26 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  width: 400px;
+  margin-bottom: 25px;
 }
 
 .unidad {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.308);
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2px;
+}
+
+.unidad__seleccionada {
+  border: 1px solid yellow;
 }
 
 .counters {
@@ -30,11 +59,20 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  width: 400px;
 }
 
 .counter {
   width: 100px;
   height: 100px;
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.288);
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2px;
 }
 /*# sourceMappingURL=styles.css.map */
